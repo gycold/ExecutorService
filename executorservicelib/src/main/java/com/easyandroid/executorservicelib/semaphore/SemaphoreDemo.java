@@ -18,7 +18,7 @@ public class SemaphoreDemo {
         ExecutorService exec = Executors.newCachedThreadPool();
         //只能5个线程同时访问
         final Semaphore semp = new Semaphore(5);
-        //模拟20个客户端访问
+        //模拟50个客户端访问
         for (int index = 0;index < 50; index++) {
             final int NO = index;
             Runnable run = new Runnable() {
